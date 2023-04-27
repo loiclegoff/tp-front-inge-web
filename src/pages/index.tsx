@@ -8,6 +8,7 @@ import {
   AlertIcon,
   AlertTitle,
 } from '@chakra-ui/react';
+import { Test } from '@/components/Test';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -33,6 +34,8 @@ export default function Home() {
             <code className={styles.code}>src/pages/index.tsx</code>
           </p>
         </div>
+
+        <Test />
 
         <div className={styles.center}>
           <Image
