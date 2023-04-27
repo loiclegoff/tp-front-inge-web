@@ -24,7 +24,7 @@ export function ShipForm() {
     BattleshipService.addShipPosition('', {
       x,
       y,
-      direction: direction,
+      direction,
     });
     alert('mon message: ' + direction + 'x: ' + x + 'y: ' + y);
   }
