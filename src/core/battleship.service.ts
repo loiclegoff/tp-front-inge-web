@@ -18,4 +18,21 @@ export class BattleshipService {
       body: JSON.stringify(position),
     });
   }
+
+  static async login(username: string, password: string) {
+    const resp = await fetch('/api/auth/authorize', {
+      method: 'POST',
+      headers: {
+        Authorization: `Basic ${username} ${password}`,
+      },
+    });
+
+    const data = await resp.json();
+
+    if (resp.status === 400) {
+      return Promise.reject(data.error);
+    }
+
+    console.log(data.access_token);
+  }
 }
