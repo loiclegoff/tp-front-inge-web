@@ -1,7 +1,8 @@
-import { BattleshipService, Ship } from '@/core/battleship.service';
+import { BattleshipService } from '@/core/battleship.service';
 import { useEffect, useState } from 'react';
-import styles from '@/styles/Preparation.module.css';
-import { ShipViewer } from '@/components/ShipViewer';
+import { ShipTable } from '@/components/ShipTable';
+import { ShipForm } from '@/components/ShipForm';
+import { Ship } from '@/types';
 
 export default function Preparation() {
   const [ships, setShips] = useState<Ship[]>([]);
@@ -16,18 +17,9 @@ export default function Preparation() {
   }, []);
 
   return (
-    <table className={styles.table}>
-      <thead>
-        <tr>
-          <th>Nom</th>
-          <th>Longueur</th>
-        </tr>
-      </thead>
-      <tbody>
-        {ships.map((ship) => (
-          <ShipViewer name={ship.name} length={ship.length} />
-        ))}
-      </tbody>
-    </table>
+    <div>
+      <ShipTable ships={ships} />
+      <ShipForm />
+    </div>
   );
 }
