@@ -1,0 +1,23 @@
+.shipName {
+  text-transform: uppercase;
+}
+
+.line {
+  border: 1px solid black;
+}
+
+.table {
+  margin: auto;
+}
+
+.case {
+  padding: 4px;
+  padding-right: 10px;
+}
+
+.tag {
+  margin: 4px;
+  padding: 4px;
+  background-color: aqua;
+  border-radius: 20px;
+}
